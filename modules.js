@@ -1,4 +1,4 @@
 const fs=require('fs');
-// fs.mkdirSync("directory");
+fs.mkdirSync("directory");
 
-fs.rmdirSync("directory");
+// fs.rmdirSync("directory");
