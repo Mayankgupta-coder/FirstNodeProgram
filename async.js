@@ -7,4 +7,4 @@ const fs=require("fs");
 // })
 fs.readFile("readasync.txt","UTF-8",(err,data)=>{
     console.log(data);
-})
+});

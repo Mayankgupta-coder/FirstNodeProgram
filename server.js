@@ -12,7 +12,7 @@ const server=http.createServer((req,res)=>{
         res.writeHead(404)
         res.end("Error page");
     }
-})
+});
 server.listen(8000,"127.0.0.1",()=>{
     console.log("Port is listening");
-})
+});
