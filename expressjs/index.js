@@ -26,6 +26,11 @@ app.get("/about",(req,res)=>{
 app.get("/html",(req,res)=>{
     res.send("<h1>Hello world from html page</h1>");
 });
+app.get("*",(req,res)=>{
+    res.render("error_page",{
+        comment:"Error",
+    });
+});
 app.get("/json",(req,res)=>{
     res.send({
         id:1,
