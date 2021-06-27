@@ -1,12 +1,17 @@
 const express=require("express");
 const path=require("path");
 const app=express();
+const hbs=require("hbs");
 console.log(__dirname);
 const staticPath=path.join(__dirname,"public/");
 console.log(staticPath);
 // app.use(express.static(staticPath));
-
+const templatePath=path.join(__dirname,"template/views");
+const partialPath=path.join(__dirname,"template/partials");
 app.set("view engine",'hbs');
+// If we change folder name from views to other
+app.set("views",templatePath);
+hbs.registerPartials(partialPath);
 app.get("/",(req,res)=>{
     res.render("index.hbs",{
         name:"Mayank",
